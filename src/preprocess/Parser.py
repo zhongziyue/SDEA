@@ -112,5 +112,6 @@ def for_file(file, file_type: OEAFileType) -> list:
     with open(file, 'r', encoding='utf-8') as rfile:
         mt = MultiprocessingTool()
         results = mt.packed_solver(line_solver).send_packs(rfile).receive_results()
+        # results = [line_solver(line) for line in rfile]
         results = [triple for triple in results if triple[0] is not None]
     return results

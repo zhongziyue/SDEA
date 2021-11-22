@@ -1,9 +1,7 @@
 # from transformers import BertModel
 import torch as t
 from config.KBConfig import *
-from train.GRUAttnNet2 import GRUAttnNet
-from train.GRUNet import LSTMNet, RNNNet
-from train.GRURelAttnNet import GRURelAttnNet
+from train.GRUAttnNet import GRUAttnNet
 from train.HighwayNet import Highway
 
 
