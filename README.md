@@ -6,19 +6,17 @@
 - transformers: 4.2.2
 - tqdm: 4.56.0
 
-[comment]: <> (```)
+## Installation
+We recommend creating a new conda environment to install the dependencies and run SDEA:
 
-[comment]: <> (pip install transformers)
+```shell
+conda create -n SDEA python=3.7
+conda activate SDEA
+conda install pytorch-gpu=1.3.1
+pip install transformers==4.2.2
+```
 
-[comment]: <> (```)
-
-
-## Datasets Preparation
-- SRPRS: https://github.com/nju-websoft/RSN/raw/master/entity-alignment-full-data.7z
-
-- DBP15K: http://ws.nju.edu.cn/jape/data/DBP15k.tar.gz
-
-1. Download the datasets and unzip them into _"SDEA/data"_. 
+## Preparation
 
 The structure of the project is listed as follows:
 
@@ -35,11 +33,33 @@ SDEA/
 │   │   ├── en_fr_15K_V1/
 │   │   ├── dbp_wd_15K_V1/
 │   │   ├── dbp_yg_15K_V1/
+├── pre_trained_models/: The pre-trained transformer-based models. 
+│   ├── bert-base-multilingual-uncased: The model used in our experiments.
+│   │   ├── config.json
+│   │   ├── pytorch_model.bin
+│   │   ├── tokenizer.json
+│   │   ├── tokenizer_config.json
+│   │   ├── vocab.txt
+│   ├── ......
 ```
 
-2. Preprocess the datasets. 
+### Datasets
+
+- SRPRS: https://github.com/nju-websoft/RSN/raw/master/entity-alignment-full-data.7z
+
+- DBP15K: http://ws.nju.edu.cn/jape/data/DBP15k.tar.gz
+
+1. Download the datasets and unzip them into _"SDEA/data"_.
+
+2. Preprocess the datasets.
+
 ```
 cd src
 python DBPDSPreprocess.py
 python SRPRSPreprocess.py
 ```
+
+### Pre-trained models
+
+The pre-trained models of _transformers_ library can be downloaded from https://huggingface.co/models. 
+We use [bert-base-multilingual-uncased](https://huggingface.co/bert-base-multilingual-uncased) in our experiments. 
