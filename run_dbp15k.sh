@@ -15,10 +15,10 @@ paras="$paras --log"
 paras="$paras --relation"
 paras="$paras --version ${version}"
 echo $paras
-python -u OEAPreprocess.py $paras
+python -u SDEAPreprocess.py $paras
 paras="$paras --fold 0"
 paras="$paras --gpus ${gpus}"
-python -u OEATrain.py $paras
+python -u SDEATrain.py $paras
 
 
 # ja_en
@@ -32,10 +32,10 @@ paras="$paras --relation"
 paras="$paras --version ${version}"
 echo $paras
 
-python -u OEAPreprocess.py $paras
+python -u SDEAPreprocess.py $paras
 paras="$paras --fold 0"
 paras="$paras --gpus ${gpus}"
-python -u OEATrain.py $paras
+python -u SDEATrain.py $paras
 
 
 # zh_en
@@ -49,7 +49,7 @@ paras="$paras --relation"
 paras="$paras --version ${version}"
 echo $paras
 
-python -u OEAPreprocess.py $paras
+python -u SDEAPreprocess.py $paras
 paras="$paras --fold 0"
 paras="$paras --gpus ${gpus}"
-python -u OEATrain.py $paras
+python -u SDEATrain.py $paras
