@@ -1,6 +1,16 @@
 # SDEA
 
 ## Dependencies
+- python: 3.7
+- pytorch: 1.3.1
+- transformers: 4.2.2
+- tqdm: 4.56.0
+
+[comment]: <> (```)
+
+[comment]: <> (pip install transformers)
+
+[comment]: <> (```)
 
 
 ## Datasets Preparation
