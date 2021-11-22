@@ -62,10 +62,12 @@ python SRPRSPreprocess.py
 ### Pre-trained Models
 
 The pre-trained models of _transformers_ library can be downloaded from https://huggingface.co/models. 
-We use [bert-base-multilingual-uncased](https://huggingface.co/bert-base-multilingual-uncased) in our experiments.
+We use [bert-base-multilingual-uncased](https://huggingface.co/bert-base-multilingual-uncased) in our experiments. 
+
+Please put the downloaded pre-trained models into _"SDEA/pre_trained_models"_. 
 
 
-### How to Run
+## How to Run
 
 ```shell
 bash run_dbp15k.sh
