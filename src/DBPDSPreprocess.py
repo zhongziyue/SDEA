@@ -25,7 +25,8 @@ for dataset in datasets:
     # print(os.getcwd())
     # 复制数据集文件
     dataset_new_path = '/'.join((new_version_path, dataset))
-    os.mkdir(dataset_new_path)
+    if not os.path.exists(dataset_new_path):
+        os.mkdir(dataset_new_path)
     load_attr('_'.join((ds1, 'att_triples')), '/'.join((dataset_new_path, 'attr_triples_1')))
     load_attr('_'.join((ds2, 'att_triples')), '/'.join((dataset_new_path, 'attr_triples_2')))
     # shutil.copy('attr_triples_1', dataset_new_path)
@@ -46,7 +47,8 @@ for dataset in datasets:
     valid_links = ent_links[train_len: train_len + valid_len]
     test_links = ent_links[train_len + valid_len:]
     new_fold_path = '/'.join((new_version_path, dataset, '721_5fold', '0'))
-    os.makedirs(new_fold_path)
+    if not os.path.exists(new_fold_path):
+        os.makedirs(new_fold_path)
     os.chdir(new_fold_path)
 
     FileTools.save_list(train_links, '/'.join((new_fold_path, 'train_links')))

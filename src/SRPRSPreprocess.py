@@ -17,7 +17,8 @@ for dataset in datasets:
     os.chdir('/'.join((old_version_path, dataset)))
 
     dataset_new_path = '/'.join((new_version_path, dataset))
-    os.mkdir(dataset_new_path)
+    if not os.path.exists(dataset_new_path):
+        os.mkdir(dataset_new_path)
     shutil.copy('attr_triples_1', dataset_new_path)
     shutil.copy('attr_triples_2', dataset_new_path)
     shutil.copy('ent_links', dataset_new_path)
@@ -34,7 +35,8 @@ for dataset in datasets:
     valid_links = ent_links[train_len: train_len + valid_len]
     test_links = ent_links[train_len + valid_len:]
     new_fold_path = '/'.join((new_version_path, dataset, '721_5fold', '0'))
-    os.makedirs(new_fold_path)
+    if not os.path.exists(new_fold_path):
+        os.makedirs(new_fold_path)
     os.chdir(new_fold_path)
 
     FileTools.save_list(train_links, '/'.join((new_fold_path, 'train_links')))

@@ -29,10 +29,10 @@ SDEA/
 │   │   ├── ja_en/
 │   │   ├── zh_en/
 │   ├── entity-alignment-full-data/: The downloaded SRPRS benchmark. 
-│   │   ├── en_de_15K_V1/
-│   │   ├── en_fr_15K_V1/
-│   │   ├── dbp_wd_15K_V1/
-│   │   ├── dbp_yg_15K_V1/
+│   │   ├── en_de_15k_V1/
+│   │   ├── en_fr_15k_V1/
+│   │   ├── dbp_wd_15k_V1/
+│   │   ├── dbp_yg_15k_V1/
 ├── pre_trained_models/: The pre-trained transformer-based models. 
 │   ├── bert-base-multilingual-uncased: The model used in our experiments.
 │   │   ├── config.json
@@ -59,7 +59,15 @@ python DBPDSPreprocess.py
 python SRPRSPreprocess.py
 ```
 
-### Pre-trained models
+### Pre-trained Models
 
 The pre-trained models of _transformers_ library can be downloaded from https://huggingface.co/models. 
-We use [bert-base-multilingual-uncased](https://huggingface.co/bert-base-multilingual-uncased) in our experiments. 
+We use [bert-base-multilingual-uncased](https://huggingface.co/bert-base-multilingual-uncased) in our experiments.
+
+
+### How to Run
+
+```shell
+bash run_dbp15k.sh
+bash run_SRPRS.sh
+```

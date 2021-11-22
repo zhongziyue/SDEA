@@ -20,7 +20,7 @@ version_str = time_str[:10]
 run_file_name = sys.argv[0].split('/')[-1].split('.')[0]
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--mode', type=str)
+parser.add_argument('--mode', type=str, default='OpenEA')
 parser.add_argument('--log', action='store_true')
 # ================= Dataset ===============================================
 data_group = parser.add_argument_group(title='General Dataset Options')
