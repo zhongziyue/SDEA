@@ -47,7 +47,7 @@ SDEA/
 
 - SRPRS: https://github.com/nju-websoft/RSN/raw/master/entity-alignment-full-data.7z
 
-- DBP15K: http://ws.nju.edu.cn/jape/data/DBP15k.tar.gz
+- DBP15K: ~~http://ws.nju.edu.cn/jape/data/DBP15k.tar.gz~~ Service unavailable now. Please download from [Google Drive](https://drive.google.com/file/d/1Xj6CaeECTDwuJM5nj_Xk3JZt_oXFu5sO/view?usp=sharing).
 
 1. Download the datasets and unzip them into _"SDEA/data"_.
 
