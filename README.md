@@ -1,4 +1,4 @@
-# SDEA
+# Semantics Driven Embedding Learning for Effective Entity Alignment
 
 ## Dependencies
 - python: 3.7
@@ -72,4 +72,19 @@ Please put the downloaded pre-trained models into _"SDEA/pre_trained_models"_.
 ```shell
 bash run_dbp15k.sh
 bash run_SRPRS.sh
+```
+
+## Citation
+If you find our work useful, please kindly cite the following paper:
+```
+@inproceedings{SDEA,
+  author    = {Ziyue Zhong and
+               Meihui Zhang and
+               Ju Fan and
+               Chenxiao Dou},
+  title     = {Semantics Driven Embedding Learning for Effective Entity Alignment},
+  booktitle = {{ICDE}},
+  publisher = {{IEEE}},
+  year      = {2022}
+}
 ```
