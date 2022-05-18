@@ -84,6 +84,7 @@ If you find our work useful, please kindly cite the following paper:
                Chenxiao Dou},
   title     = {Semantics Driven Embedding Learning for Effective Entity Alignment},
   booktitle = {{ICDE}},
+  pages     = {2128--2141},
   publisher = {{IEEE}},
   year      = {2022}
 }
